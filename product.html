@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="pichass/titlebar.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleville Dental</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<style>
+    
+    @media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #05696b; /* Change background color when collapsed */
+  }
+}
+.nav-link{
+         color: #000000 !important;
+     }
+     .nav-link:hover{
+         color: white !important;
+     }
+.dropdown-menu{
+    background-color: #05696b !important;}
+    .carousel-inner{
+        margin-bottom: 100px;
+        margin-right: 200px;
+
+    }
+    .carousel-item{
+        height: 500px;
+    }
+    h4{
+      margin-top: 30px;
+         color:#afe5e6 !important;
+         
+         text-align: center;
+         font-size: 40px;
+    }
+    
+h3{
+  font-size: 30px;
+  color: #05696b;
+  margin-left: 1400px;
+}
+.popup {
+  position: relative;
+  width: 320px;
+  height: fit-content;
+  background:#05696b;
+  box-shadow: 0px 187px 75px rgba(255, 255, 255, 0.01), 0px 105px 63px rgba(255, 255, 255, 0.05), 0px 47px 47px rgba(255, 255, 255, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 13px;
+  margin-left: 1300px;
+  margin-top: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 20px;
+  gap: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #ECF1FD;
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 5px;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #2B2B2F;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: #5F5D6B;
+}
+
+.input_field {
+  width: 100%;
+  height: 42px;
+  padding: 0 0 0 12px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 0px 1px #2B2B2F;
+  background-color: transparent;
+}
+
+.form button.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+  width: 100%;
+  height: 42px;
+  background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 5px;
+  border: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+.carousel-innerr{
+  margin-left: 600px;
+}
+    
+.card{
+         margin-top: 60px;
+         background-color:#05696b  !important;
+        gap: 40px;
+        margin: 20px 20px;
+        box-shadow: 0 0 15px 10px #5F5D6B;
+       }
+       .card:hover{
+        box-shadow: 0 0 20px 10px #5F5D6B;
+       }
+       .card-title {
+      color: white;
+      text-decoration: underline;
+       }
+     
+      #card3{
+        height: 490px;
+      }
+      #card6{
+        height: 505px;
+      }
+    
+      .card-text{
+        color: white;
+      }
+      .products{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .staricon{
+        color: gold;
+      }
+      .ratingcss div{
+        color: gold;
+        font-size: 15px;
+      }
+      .ratingcss input{
+        display: none;
+        color: gold;
+      }
+      .ratingcss input:checked+ label ~ label{
+        color: #838383;
+      }
+      .ratingcss label:active{
+        transform: scale(0.8);
+        transition: 0.3 ease;
+      }
+
+
+      .staricon{
+        color: gold;
+      }
+      .ratincss div{
+        color: gold;
+        font-size: 15px;
+      }
+      .ratincss input{
+        display: none;
+        color: gold;
+      }
+      .ratincss input:checked+ label ~ label{
+        color: #838383;
+      }
+      .ratincss label:active{
+        transform: scale(0.8);
+        transition: 0.3 ease;
+      }
+/*   
+      .btn.btn-outline-primary{
+        margin-left: 800px;
+        color: #05696b;
+        border-radius: 1px solid rgb(0, 0, 0);
+        height: 70px;
+        width: 170px;
+        font-size: 25px;
+        background-color: #afe5e6;
+      }
+      .btn.btn-outline-secondary{
+        color: #05696b;
+        border-radius: 1px solid rgb(0, 0, 0);
+        height: 70px;
+        width: 170px;
+        font-size: 25px;
+        background-color: #afe5e6;
+      } */
+    </style>
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="head">
+                    
+              <a class="logo" href="index.html"><img style="height: 20%; width: 23%; margin-left: -68px; margin-top: -5px;"
+                 src="pichass/neon-removebg-preview.png" alt="loading"></a>
+              <a class="navbar-brand fs-5 " href="index.html">Belleville Dental</a></div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+               aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item fs-5">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="book.html">Book</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown fs-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      DentaHub
+
+                    </a>
+                    <ul class="dropdown-menu me-auto mb-2 mb-lg-0">
+                      <li><a class="dropdown-item" href="pro education3.html">Professional Education</a></li>
+                      <li><a class="dropdown-item" href="patientedu.html">Patient Education</a></li>
+                      <li><a class="dropdown-item" href="research.html">Research</a></li>
+                      <li><a class="dropdown-item" href="product.html">Products</a></li>
+                      <li><a class="dropdown-item" href="gallery.html">Media Gallery</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+                     
+            <img src="https://hitwebcounter.com/counter/counter.php?page=12454960&style=0008&nbdigits=5&type=ip&initCount=0" 
+            title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>     
+        </nav>
+            
+    </section>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="pichass/GC-WebImage-NewProductPortfolio-HFGProductsBanner-1140x360-2106.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+    </div>
+      <center><h2 style="color: #05696b; font-size: 90px; font-weight: 400; margin-top: -200px;"> New Arrivals</h2></center>
+      <div class="products">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem; ">
+                    <img src="pichass/baade band.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #05696b;">
+                        <h5 class="card-title">Baade Band</h5>
+                        <p class="card-text">#3857749</p>
+                        <a href="band.html" class="btn btn-light">Click To Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="pichass/moll cuerett.webp" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #05696b;">
+                        <h5 class="card-title">Moll Curette</h5>
+                        <p class="card-text">#3857749</p>
+                        <a href="moll.html" class="btn btn-light">Click To Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="pichass/dissections forcep.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #05696b;">
+                        <h5 class="card-title">Dissection Forceps</h5>
+                        <p class="card-text">#3857749</p>
+                        <a href="dis.html" class="btn btn-light">Click To Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/endomotor.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">Endomotor</h5>
+                <p class="card-text">#3857749</p>
+                <a href="endomotor.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/shofu.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">Shofu</h5>
+                <p class="card-text">#3857749</p>
+                <a href="shofu.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/led.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">UltraSonic Led</h5>
+                <p class="card-text">#3857749</p>
+                <a href="usled.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/medbone.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">MedBone</h5>
+                <p class="card-text">#3857749</p>
+                <a href="medbone.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/pdgran.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">PD-Granulotec</h5>
+                <p class="card-text">#3857749</p>
+                <a href="pd.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="pichass/pouches.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="background-color: #05696b;">
+                <h5 class="card-title">Sterelizaation Pouches</h5>
+                <p class="card-text">#3857749</p>
+                <a href="pouches.html" class="btn btn-light">Click To Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  
+  
+  <center><h2 style="color: #05696b; font-size: 90px; font-weight: 400; ">Dentist</h2></center>
+  <center><p class="lines" style="color: #000000;">
+    Discover a comprehensive range of high-quality dental products designed to <br> enhance oral health and elevate patient care.
+     From essential oral hygiene <br> tools like toothbrushes and dental floss to advanced restorative materials <br>and cutting-edge
+      diagnostic equipment, our selection caters to the <br> diverse needs 
+      of dental professionals and patients alike.</p></center>
+      <center><button type="button" class="btn btn-outline-primary">Learn More</button>
+<button type="button" class="btn btn-outline-secondary">Sign up</button></center>
+
+<br>
+<br>
+<br>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-innerr">
+        <div class="carousel-item active">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+
+              <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" >
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span style="color:#171a1e; " > Get connected with us on social networks:</span>
+    </div>
+  </section>
+
+  <!-- Section: Links  -->
+  <section class="footer" style="background-color:#171a1e ;">
+    <div class="container text-center text-md-start mt-5" >
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: #05696b;  margin-top: 20px;">
+          Belleville Dental
+          </h6>
+          <p style="color: white;" >
+            Welcome to our website, where every click brings you closer to a brighter, healthier
+             smile. At Belleville Dental, we're dedicated to providing comprehensive dental care with a personal touch.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: #05696b !important;  margin-top: 20px;">
+            Quick Links
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset" style="color:#05696b !important;">Home</a>
+          </p>
+          <p>
+            <a href="aboutus.html" class="text-reset" style="color:#05696b !important; ">About</a>
+          </p>
+          <p>
+            <a href="book.html" class="text-reset" style="color:#05696b !important;">Book</a>
+          </p>
+          <p>
+            <a href="contact.html" class="text-reset" style="color: #05696b !important;">Contact Us</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color:#05696b !important; margin-top: 20px;">Contact</h6>
+          <p style="color:#05696b !important"><i class="fas fa-home me-3 " ></i> New York, NY 10012, US</p>
+          <p style="color:#05696b !important">
+            <i class="fas fa-envelope me-3"></i>
+            bellevilledental.com
+          </p>
+          <p style="color:#05696b !important"><i class="fas fa-phone me-3"></i> +92 3188722722</p>
+          <!-- Section: Social media -->
+          <div>
+            <a href="https://www.facebook.com/profile.php?id=61557518252499&mibextid=LQQJ4d" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/belleville_dental_?igsh=bGdpbmMyMjNieGl2" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+  </div>
+  <!-- Copyright -->
+</footer>
+    </body>
+    </html>

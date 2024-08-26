@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="pichass/titlebar.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleville Dental</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+      @media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color:#05696b; /* Change background color when collapsed */
+  }
+}
+      div, h2, h3, h6, form, label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.booking-form-w3layouts {
+  box-sizing: border-box;
+  padding: 3em;
+  background: rgba(0, 0, 0, 0.78);
+  width: 65%;
+  margin: 0 auto;
+}
+
+h2.sub-heading-agileits,
+h3.sub-heading-agileits {
+  display: inline-block;
+  text-align: left;
+  font-size: 24px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 0.4em;
+  padding: 0px 25px 10px 0px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #0091cd;
+  font-family: 'Raleway', sans-serif;
+}
+
+.radio-section {
+  text-align: left;
+  margin: 0.7em 0;
+}
+
+.radio-section h6 {
+  display: inline;
+  margin-top: 10px;
+  color: #0091cd;
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-bottom: 0.7em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.radio-section ul {
+  display: inline;
+}
+
+.radio-buttons-w3-agileits li input[type="radio"] {
+  cursor: pointer;
+}
+
+.radio-buttons-w3-agileits li label {
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.booking-form-w3layouts input[type="text"],
+.booking-form-w3layouts input[type="email"],
+.booking-form-w3layouts textarea,
+select.form-control,
+input#datepicker {
+  width: 100%;
+  font-weight: 300;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.booking-form-w3layouts textarea {
+  resize: none;
+  height: 80px;
+}
+
+.field-agileinfo-spc {
+  margin-bottom: 1em;
+}
+
+.form-w3-agile-text {
+  width: 100%;
+}
+
+select.form-control option {
+  background: #000;
+}
+
+.booking-form-w3layouts input[type="submit"],
+.booking-form-w3layouts input[type="reset"] {
+  text-transform: capitalize;
+  background: #0091cd;
+  color: #fff;
+  padding: 0.5em 4em;
+  border: none;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-top: 1em;
+  float: left;
+  outline: none;
+  letter-spacing: 1px;
+  transition: 0.5s all;
+}
+.booking-form-w3layouts input[type="submit"] {
+  margin-right: 1.5em;
+  background: #d2741c;
+}
+
+.booking-form-w3layouts input[type="submit"]:hover {
+  background: #0091cd;
+  color: #fff;
+}
+
+.booking-form-w3layouts input[type="reset"]:hover {
+  background: #d2741c;
+  color: #fff;
+}
+
+.booking-form-w3layouts ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.booking-form-w3layouts :-moz-placeholder {
+  color: #fff;
+}
+
+.booking-form-w3layouts ::-moz-placeholder {
+  color: #fff;
+}
+
+.booking-form-w3layouts :-ms-input-placeholder {
+  color: #fff;
+}
+
+.booking-form-w3layouts label {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.83);
+  letter-spacing: 2px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 5px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+ul.radio-buttons-w3-agileits li {
+  display: inline-block;
+  margin: 0em 2em;
+}
+
+@media (max-width: 1440px) {
+  .booking-form-w3layouts {
+    width: 73%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .booking-form-w3layouts {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .booking-form-w3layouts {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .booking-form-w3layouts {
+    width: 83%;
+    padding: 2em 2.2em;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2.sub-heading-agileits,
+  h3.sub-heading-agileits {
+    font-size: 22px;
+    padding: 0px 20px 7px 0px;
+  }
+  .field-agileinfo-spc {
+    margin-bottom: 0.8em;
+  }
+  .booking-form-w3layouts input[type="submit"],
+  .booking-form-w3layouts input[type="reset"] {
+    padding: 0.5em 3em;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.sub-heading-agileits,
+  h3.sub-heading-agileits {
+    font-size: 21px;
+    padding: 0px 15px 7px 0px;
+  }
+  .radio-section h6 {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+  ul.radio-buttons-w3-agileits li {
+    margin: 0em 1em;
+  }
+}
+
+@media (max-width: 667px) {
+  h2.sub-heading-agileits,
+  h3.sub-heading-agileits {
+    font-size: 19px;
+    letter-spacing: 1.5px;
+  }
+  .booking-form-w3layouts {
+    width: 86%;
+    padding: 2em 2em;
+  }
+  .booking-form-w3layouts input[type="text"],
+  .booking-form-w3layouts input[type="email"],
+  .booking-form-w3layouts textarea,
+  select.form-control,
+  input#datepicker {
+    padding: 8px 10px;
+  }
+  .field-agileinfo-spc {
+    margin-bottom: 0.9em;
+  }
+  h2.sub-heading-agileits,
+  h3.sub-heading-agileits {
+    margin-bottom: 0.6em;
+  }
+}
+
+@media (max-width: 640px) {
+  .booking-form-w3layouts input[type="submit"] {
+    margin-right: 0.7em;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-form-w3layouts {
+    width: 90%;
+  }
+  .booking-form-w3layouts input[type="submit"],
+  .booking-form-w3layouts input[type="reset"] {
+    padding: 0.5em 2em;
+  }
+}
+
+@media (min-width: 481px) {
+  .main-flex-w3ls-sectns {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .form-w3-agile-text1,
+  .form-w3-agile-text2 {
+    flex-basis: 48.5%;
+    -webkit-flex-basis: 48.5%;
+  }
+}
+
+@media (min-width: 737px) {
+  .triple-wthree {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .form-w3-agile-text11,
+  .form-w3-agile-text22,
+  .form-w3-agile-text33 {
+    flex-basis: 32%;
+    -webkit-flex-basis: 32%;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.radio-buttons-w3-agileits li {
+    margin: 0em 0.5em;
+  }
+  .radio-section {
+    margin: 1.3em 0 .7em;
+  }
+  .booking-form-w3layouts {
+    width: 85%;
+  }
+  ul.radio-buttons-w3-agileits li {
+    margin: 1em 0em 0em 0.2em;
+    display: block;
+  }
+  .booking-form-w3layouts input[type="submit"],
+  .booking-form-w3layouts input[type="reset"] {
+    font-size: 1em;
+  }
+  .booking-form-w3layouts textarea {
+    height: 60px;
+  }
+  .radio-section {
+    margin: 1em 0 .7em;
+  }
+}
+
+@media (max-width: 414px) {
+  .booking-form-w3layouts {
+    width: 90%;
+  }
+  .booking-form-w3layouts {
+    width: 90%;
+    padding: 1.5em 1.7em;
+  }
+}
+
+@media (max-width: 384px) {
+  .booking-form-w3layouts input[type="submit"],
+  .booking-form-w3layouts input[type="reset"] {
+    float: none;
+  }
+  .booking-form-w3layouts input[type="submit"] {
+    margin-right: 0em;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking-form-w3layouts {
+    width: 93%;
+    padding: 1.3em 1.5em;
+  }
+  h2.sub-heading-agileits,
+  h3.sub-heading-agileits {
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    padding: 0px 12px 5px 0px;
+  }
+}
+    </style>
+</head>
+<body>
+  <script>
+
+  function validateForm() {
+    // Get form inputs
+    var doctor = document.querySelector('.field-agileinfo-spc.form-w3-agile-text1 select').value;
+    var location = document.querySelector('.field-agileinfo-spc.form-w3-agile-text2 select').value;
+    var preferredDay = document.getElementById('datepicker').value;
+    var preferredTime = document.getElementById('timepicker').value;
+    var adultCount = document.querySelector('.field-agileinfo-spc.form-w3-agile-text11 select').value;
+    var childCount = document.querySelector('.field-agileinfo-spc.form-w3-agile-text22 select').value;
+    var infantCount = document.querySelector('.field-agileinfo-spc.form-w3-agile-text33 select').value;
+    var takenBeforeYes = document.getElementById('a-option').checked;
+    var takenBeforeNo = document.getElementById('b-option').checked;
+    var message = document.querySelector('.field-agileinfo-spc.form-w3-agile-text textarea').value;
+    var fullName = document.querySelector('.field-agileinfo-spc.form-w3-agile-text1 input[name="Name"]').value;
+    var phoneNumber = document.querySelector('.field-agileinfo-spc.form-w3-agile-text2 input[name="Phone no"]').value;
+    var email = document.querySelector('.field-agileinfo-spc.form-w3-agile-text input[name="Email"]').value;
+
+    // Perform validation checks
+    if (doctor === "Choose Doctor") {
+      alert("Please select a doctor.");
+      return false;
+    }
+
+    if (location === "Location") {
+      alert("Please select a location.");
+      return false;
+    }
+
+    // Add more validation checks for other fields as needed
+
+    // Form is valid, allow submission
+    return true;
+  }
+</script>
+
+
+
+
+    
+    <section>
+                                     <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="head">
+              <a class="logo" href="index.html"><img style="height: 20%; width: 23%; margin-left: -50px; margin-top: -5px;"
+                 src="pichass/neon-removebg-preview.png" alt="loading"></a>
+              <a class="navbar-brand fs-5 " href="index.html"">Belleville Dental</a></div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+               aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item fs-5">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="book.html">Book</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown fs-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      DentaHub
+                    </a>
+                    <ul class="dropdown-menu me-auto mb-2 mb-lg-0">
+                      <li><a class="dropdown-item" href="pro education3.html">Professional Education</a></li>
+                      <li><a class="dropdown-item" href="patientedu.html">Patient Education</a></li>
+                      <li><a class="dropdown-item" href="research.html">Research</a></li>
+                      <li><a class="dropdown-item" href="product.html">Products</a></li>
+                      <li><a class="dropdown-item" href="gallery.html">Media Gallery</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+            <img src="https://hitwebcounter.com/counter/counter.php?page=12454960&style=0008&nbdigits=5&type=ip&initCount=0" 
+  title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>     
+          </nav>
+    </section>
+  
+
+                                  <!-- Book -->
+    <!-- <form class="row g-3">
+       <center> <h1 style="color: white;">Book Your Appointment Here</h1></center>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Last Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Time</label>
+            <input type="time" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-6">
+            <label for="inputAddress" class="form-label">Day</label>
+            <input type="text" class="form-control" id="inputAddress"">
+          </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">City</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>Karachi</option>
+            <option>Islamabad</option>
+            <option>Lahore</option>
+            <option>Hyderabad</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="form-check">
+            <p style="color: white;">Have you previously attended our facility?</p>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1" style="color: white;">
+              YES
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2" style="color: white;">
+              NO
+            </label>
+          </div>
+        <div class="col-12">
+          <button type="submit" class="btn" style="background-color: white;">Book</button>
+        </div>
+      </form>
+
+      
+      <br><br><br><br><br><br> -->
+
+
+      <!-- https://w3layouts.com/airline-booking-form-responsive-widget-template/ -->
+      <center><h1 style="color:#05696b; font-weight: bold; font-size: 50px;">Book Your Appointments Here</h1></center>
+<div class="booking-form-w3layouts">
+  <!-- Form starts here -->
+  <form   method="post" id="bookingForm">
+    <h2 class="sub-heading-agileits">Booking Details</h2>
+    <div class="main-flex-w3ls-sectns">
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+            <select class="form-control" name="doctor" required >
+                <option value="" style="background-color: white; color: #000;">Choose Doctor</option>
+                <option value="Dr. Joseph" style="background-color: white; color: #000;">Dr. Joseph</option>
+                <option value="Dr. Julie" style="background-color: white; color: #000;">Dr. Julie</option>
+                <option value="Dr. Robert" style="background-color: white; color: #000;" >Dr. Robert</option>
+                <option value="Dr. Silvea" style="background-color: white; color: #000;">Dr. Silvea</option>
+            </select>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text2">
+            <select class="form-control" name="location" required>
+                <option value="" style="background-color: white; color: #000;">Location</option>
+                <option value="North Nazimabad"  style="background-color: white; color: #000;">North Nazimabad</option>
+                <option value="North Karachi"  style="background-color: white; color: #000;">North Karachi</option>
+                <option value="DHA Phase 6"  style="background-color: white; color: #000;">DHA Phase 6</option>
+                <option value="Shahra E Faisal"  style="background-color: white; color: #000;">Shahra E Faisal</option>
+            </select>
+        </div>
+    </div>
+    <div class="main-flex-w3ls-sectns">
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+            <input id="datepicker" name="day" type="text" placeholder="Preferred Day (mm/dd/yyyy)" value="" required>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text2">
+            <input type="text" id="timepicker" name="time" class="timepicker form-control hasWickedpicker" placeholder="Preferred Time" value="" required>
+        </div>
+    </div>
+    <div class="triple-wthree">
+        <div class="field-agileinfo-spc form-w3-agile-text11">
+            <select class="form-control" name="adults">
+                <option value=""  style="background-color: white; color: #000;">Adults (12+ Yrs)</option>
+                <option value="1"  style="background-color: white; color: #000;">1</option>
+                <option value="2"  style="background-color: white; color: #000;">2</option>
+                <option value="3"  style="background-color: white; color: #000;">3</option>
+                <option value="4"  style="background-color: white; color: #000;">4</option>
+                <option value="5"  style="background-color: white; color: #000;">5+</option>
+            </select>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text22">
+            <select class="form-control" name="children">
+                <option value=""  style="background-color: white; color: #000;">Children (2-11 Yrs)</option>
+                <option value="1"  style="background-color: white; color: #000;">1</option>
+                <option value="2"  style="background-color: white; color: #000;">2</option>
+                <option value="3"  style="background-color: white; color: #000;">3</option>
+                <option value="4"  style="background-color: white; color: #000;">4</option>
+                <option value="5"  style="background-color: white; color: #000;">5+</option>
+            </select>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text33">
+            <select class="form-control" name="infants">
+                <option value=""  style="background-color: white; color: #000;">Infants (Under 2 Yrs)</option>
+                <option value="1"  style="background-color: white; color: #000;">1</option>
+                <option value="2"  style="background-color: white; color: #000;">2</option>
+                <option value="3"  style="background-color: white; color: #000;">3</option>
+                <option value="4"  style="background-color: white; color: #000;">4</option>
+                <option value="5"  style="background-color: white; color: #000;">5+</option>
+            </select>
+        </div>
+    </div>
+    <div class="radio-section">
+        <h6>Taken this facility before?</h6>
+        <ul class="radio-buttons-w3-agileits">
+            <li>
+                <input type="radio" id="a-option" name="facility_before" value="Yes">
+                <label for="a-option">Yes</label>
+                <div class="check"></div>
+            </li>
+            <li>
+                <input type="radio" id="b-option" name="facility_before" value="No">
+                <label for="b-option">No</label>
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="field-agileinfo-spc form-w3-agile-text">
+        <textarea name="message" placeholder="Any Message..."></textarea>
+    </div>
+    <h3 class="sub-heading-agileits">Personal Details</h3>
+    <div class="main-flex-w3ls-sectns">
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text2">
+            <input type="text" name="phone" placeholder="Phone Number" required>
+        </div>
+    </div>
+    <div class="field-agileinfo-spc form-w3-agile-text">
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="clear"></div>
+    <input type="submit" value="Book" style="background-color: #05696b;" onclick="validateForm()">
+    <input type="reset" value="Clear Form" style="background-color: #05696b;">
+    <div class="clear"></div>
+</form>
+
+<script>
+    // function validateForm() {
+    //     var form = document.getElementById('bookingForm');
+    //     if (!form.checkValidity()) {
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //     }
+    //     form.classList.add('was-validated');
+        
+    // }
+    function validateForm() {
+       
+            // Check if all inputs are filled with correct order
+            var doctor = document.getElementsByName('doctor')[0].value;
+            var location = document.getElementsByName('location')[0].value;
+            var day = document.getElementsByName('day')[0].value;
+            var time = document.getElementsByName('time')[0].value;
+            var adults = document.getElementsByName('adults')[0].value;
+            var children = document.getElementsByName('children')[0].value;
+            var infants = document.getElementsByName('infants')[0].value;
+            var facilityBefore = document.querySelector('input[name="facility_before"]:checked');
+
+            if (doctor || location || day || time || adults  || children || infants || facilityBefore) {
+                alert('Booking is done!');
+                
+            }
+            else {
+                alert('Add all details!');
+
+            }
+        }
+        form.classList.add('was-validated');
+    
+
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        validateForm();
+    });
+
+    
+
+    $('#datepicker').datepicker({
+        format: 'mm/dd/yyyy',
+        startDate: '+1d',
+        autoclose: true
+    });
+
+    $('#timepicker').wickedpicker({
+        now: '12:00', // current time
+        twentyFour: true,  // display 24 hour format
+        title: 'Select Time' // optional
+    });
+    
+</script>
+
+  <br><br><br><br>
+  <!--// Form starts here -->
+</div>
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" >
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span style="color:#171a1e; " > Get connected with us on social networks:</span>
+    </div>
+  </section>
+
+  <!-- Section: Links  -->
+  <section class="footer" style="background-color:#171a1e ;">
+    <div class="container text-center text-md-start mt-5" >
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: #05696b;  margin-top: 20px;">
+          Belleville Dental
+          </h6>
+          <p style="color: white;" >
+            Welcome to our website, where every click brings you closer to a brighter, healthier
+             smile. At Belleville Dental, we're dedicated to providing comprehensive dental care with a personal touch.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color:#05696b !important;  margin-top: 20px;">
+            Quick Links
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset" style="color:#05696b !important;">Home</a>
+          </p>
+          <p>
+            <a href="aboutus.html" class="text-reset" style="color:#05696b !important; ">About</a>
+          </p>
+          <p>
+            <a href="book.html" class="text-reset" style="color:#05696b !important;">Book</a>
+          </p>
+          <p>
+            <a href="contact.html" class="text-reset" style="color:#05696b !important;">Contact Us</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color:#05696b !important;  margin-top: 20px;">Contact</h6>
+          <p style="color:#05696b !important"><i class="fas fa-home me-3 " ></i> New York, NY 10012, US</p>
+          <p style="color:#05696b !important">
+            <i class="fas fa-envelope me-3"></i>
+            bellevilledental.com
+          </p>
+          <p style="color:#05696b !important"><i class="fas fa-phone me-3"></i> +92 3188722733</p>
+          <!-- Section: Social media -->
+          <div>
+            <a href="https://www.facebook.com/profile.php?id=61557518252499&mibextid=LQQJ4d" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/belleville_dental_?igsh=bGdpbmMyMjNieGl2" target="_blank" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+  </div>
+  <!-- Copyright -->
+</footer>
+</body>
+</html>

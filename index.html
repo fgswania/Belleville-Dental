@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="pichass/titlebar.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleville Dental</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&amp;display=swap">
+    <style>
+      @media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color:#05696b; /* Change background color when collapsed */
+  }
+}
+      .pfp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .prof {
+    width: calc(50% - 20px);
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .img {
+    background-color: #cccccc;
+    height: 200px; /* Adjust height as needed */
+  }
+
+  .info {
+    padding: 20px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .prof {
+      width: calc(100% - 20px);
+    }
+  }
+  .patientcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #171a1e;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .card {
+      width: calc(100% - 20px);
+    }
+  }
+
+.doc {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center center;
+	transition: background 0.5s ease 0s;
+	font-family: 'Londrina Solid', cursive;
+}
+
+.doc:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #05696b;
+	z-index: 0;
+}
+
+.content {
+	width: 60vmin;
+	height: 60vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center center;
+	background-image: var(--img, url(https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg));
+	transition: background 0.5s ease 0s;
+	max-width: 500px;
+	max-height: 500px;
+	box-shadow: 0 0 0vmin 1vmin #fff, 0 0 10vmin 5vmin #000;
+	border-radius: 2px;
+	z-index: 0;
+	background-color: #fff;
+}
+
+.content:before {
+
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-bottom: -55vmin;
+	text-shadow: -1px -1px 0 #0007;
+	color: #fff4;
+	font-size: 18px;
+}
+
+/* CONTROLS */
+.controls {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;
+}
+
+input[type=radio] {
+	display: none;
+}		
+
+label {
+	width: 50vw;
+	height: 100vh;
+	position: relative;
+	cursor: pointer;
+	opacity: 0.15;
+}
+
+label:hover {
+	opacity: 1;
+}
+
+input:first-child:checked ~ .content .controls label:first-child,
+input:last-of-type:checked ~ .content .controls label:last-of-type {
+	cursor: default;
+	opacity: 0.025;
+}
+
+
+/* HIDE LABELS */
+#b2:checked ~ .content .controls label[for=b2], 
+#b3:checked ~ .content .controls label[for=b3], 
+#b4:checked ~ .content .controls label[for=b4], 
+#b5:checked ~ .content .controls label[for=b5], 
+#b6:checked ~ .content .controls label[for=b6], 
+#b7:checked ~ .content .controls label[for=b7], 
+#b8:checked ~ .content .controls label[for=b8], 
+#b9:checked ~ .content .controls label[for=b9], 
+
+#b3:checked ~ .content .controls label[for=b1],
+#b4:checked ~ .content .controls label[for=b1],
+#b4:checked ~ .content .controls label[for=b2],
+#b5:checked ~ .content .controls label[for=b1],
+#b5:checked ~ .content .controls label[for=b2],
+#b5:checked ~ .content .controls label[for=b3],
+#b6:checked ~ .content .controls label[for=b1],
+#b6:checked ~ .content .controls label[for=b2],
+#b6:checked ~ .content .controls label[for=b3],
+#b6:checked ~ .content .controls label[for=b4],
+#b7:checked ~ .content .controls label[for=b1],
+#b7:checked ~ .content .controls label[for=b2],
+#b7:checked ~ .content .controls label[for=b3],
+#b7:checked ~ .content .controls label[for=b4],
+#b7:checked ~ .content .controls label[for=b5],
+#b8:checked ~ .content .controls label[for=b1],
+#b8:checked ~ .content .controls label[for=b2],
+#b8:checked ~ .content .controls label[for=b3],
+#b8:checked ~ .content .controls label[for=b4],
+#b8:checked ~ .content .controls label[for=b5],
+#b8:checked ~ .content .controls label[for=b6],
+#b9:checked ~ .content .controls label[for=b1],
+#b9:checked ~ .content .controls label[for=b2],
+#b9:checked ~ .content .controls label[for=b3],
+#b9:checked ~ .content .controls label[for=b4],
+#b9:checked ~ .content .controls label[for=b5],
+#b9:checked ~ .content .controls label[for=b6],
+#b9:checked ~ .content .controls label[for=b7],
+#b10:checked ~ .content .controls label[for=b1] ,
+#b10:checked ~ .content .controls label[for=b2] ,
+#b10:checked ~ .content .controls label[for=b3] ,
+#b10:checked ~ .content .controls label[for=b4] ,
+#b10:checked ~ .content .controls label[for=b5] ,
+#b10:checked ~ .content .controls label[for=b6] ,
+#b10:checked ~ .content .controls label[for=b7] ,
+#b10:checked ~ .content .controls label[for=b8] {
+	display: none;
+}
+
+
+/* ARROWS */
+label:before {
+	content: "";
+	position: absolute;
+	background: 
+		linear-gradient(30deg, #fff0 60%, #fff calc(60% + 1px)), 
+		linear-gradient(-30deg, #fff 40%, #fff0 calc(40% + 1px)), 
+		linear-gradient(-90deg, #fff0 70%, #fff calc(70% + 1px));
+	width: 6vmin;
+	height: 6vmin;
+	border-radius: 5px;
+	right: 7vmin;
+	top: calc(50% - 3vmin);
+}
+
+/* LEFT ARROW */
+#b1:checked ~ .content .controls label[for=b1]:before,
+#b2:checked ~ .content .controls label[for=b1]:before,
+#b3:checked ~ .content .controls label[for=b2]:before,
+#b4:checked ~ .content .controls label[for=b3]:before,
+#b5:checked ~ .content .controls label[for=b4]:before,
+#b6:checked ~ .content .controls label[for=b5]:before,
+#b7:checked ~ .content .controls label[for=b6]:before,
+#b8:checked ~ .content .controls label[for=b7]:before,
+#b9:checked ~ .content .controls label[for=b8]:before,
+#b10:checked ~ .content .controls label[for=b9]:before {
+	left: 7vmin;
+	transform: rotate(180deg);
+}
+
+
+
+
+/* TITLES  */
+.doc:after {
+
+	position: absolute;
+	top: 2vh;
+	color: #fff;
+	font-size: 35px;
+	line-height: 45px;
+	transition: all 0.5s ease 0s;
+	text-shadow: 0px 1px 0 #000000d9;
+	white-space: pre-wrap;
+	text-align: center;
+	width: 100vw;
+	padding: 1vmin;
+	background: #ffffff05;
+	font-weight: 300;
+}
+
+/* body:has(input#b1:checked):after {
+	content: "Saqueadores de Conventos (6b+) \a RISCO DE LOS SAQUEADORES";
+}
+
+body:has(input#b2:checked):after {
+	content: "Lucas (A2/V+) \a EL HUESO";
+}
+
+body:has(input#b3:checked):after {
+	content: "El blues de los ojos bonitos (6a+) \a TRES CORONAS";
+}
+
+body:has(input#b4:checked):after {
+	content: "Perros Salvajes (A4) \a EL GRAN MOLONDRIO";
+}
+
+body:has(input#b5:checked):after {
+	content: "To\00F1 in (7b) \a ROC\00D3 DROMO";
+}
+
+body:has(input#b6:checked):after {
+	content: "El Clan de los Osos (A2) \a EL PANDEMONIUM";
+}
+
+body:has(input#b7:checked):after {
+	content: "Oscar y Raul (V+/6a) \a HUECO DE LAS HOCES";
+}
+
+body:has(input#b8:checked):after {
+	content: "Me pesa hasta el aire (A2/?) \a RISCO DE LA DEHESILLA";
+}
+
+body:has(input#b9:checked):after {
+	content: "Diedro (6b) \a RISCO DE LA MEZQUITA";
+}
+
+body:has(input#b10:checked):after {
+	content: "Biafra (6a+/A2) \a EL HUESO";
+} */
+
+
+
+/*** THUMBNAILS ***/
+.thumbnails {
+	position: absolute;
+	background: #ffffff05;
+	width: 100vw;
+	bottom: 3vh;
+	text-align: center;
+	padding: 1vmin;
+}
+
+.thumbnails label {
+	background-color: #0008;
+	position: relative;
+	width: 8vmin;
+	height: 8vmin;
+	display: inline-block;
+	margin-left: 1vw;
+	background-image: var(--img);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.5;
+	border-radius: 2px;
+}
+
+/* IMAGES / THUMBNAILS */
+body:has(input#b1:checked), .thumbnails label[for=b1] {
+	--img: url(https://media.baamboozle.com/uploads/images/696394/1649761686_252257_url.jpeg);
+}
+
+body:has(input#b2:checked), .thumbnails label[for=b2] {
+	--img: url(https://demeterly.com/wp-content/uploads/2018/08/qtq80-z3hZKg.jpeg);
+}
+
+body:has(input#b3:checked), .thumbnails label[for=b3] {
+	--img: url(https://paradigmlife.net/wp-content/uploads/2020/03/doctor.jpg);
+}
+
+body:has(input#b4:checked), .thumbnails label[for=b4] {
+	--img: url(https://media.zenfs.com/en/galvanized/ddf0c133ab82131f05997243d708bd51);
+}
+
+body:has(input#b5:checked), .thumbnails label[for=b5] {
+	--img: url(https://theme.visualmodo.com/medical/wp-content/uploads/sites/37/2017/07/medical-10.png);
+}
+
+body:has(input#b6:checked), .thumbnails label[for=b6] {
+	--img: url(https://do-umc.ru/pluginfile.php/58978/course/overviewfiles/Depositphotos_20425031_l-2015.jpg);
+}
+
+body:has(input#b7:checked), .thumbnails label[for=b7] {
+	--img: url(https://avatars.mds.yandex.net/i?id=260403c653728ea0f4d404e48015c06c4e3dfd86-10498726-images-thumbs&n=13);
+}
+
+body:has(input#b8:checked), .thumbnails label[for=b8] {
+	--img: url(https://ddi-12.com/wp-content/uploads/2019/10/Depositphotos_42486521_original-1536x1025.jpg);
+}
+
+body:has(input#b9:checked), .thumbnails label[for=b9] {
+	--img: url(https://smartprogress.do/uploadImages/001118988.jpg);
+}
+
+body:has(input#b10:checked), .thumbnails label[for=b10] {
+	--img: url(https://www.hlaw.ca/wp-content/uploads/2015/10/iStock_000069856833_Large.jpg);
+}
+
+.thumbnails label:before { display: none; }
+.thumbnails label:hover { opacity: 1; }
+.thumbnails label:first-child { margin-left: 0; }
+
+#b1:checked ~ .content .thumbnails label[for=b1],
+#b2:checked ~ .content .thumbnails label[for=b2],
+#b3:checked ~ .content .thumbnails label[for=b3],
+#b4:checked ~ .content .thumbnails label[for=b4],
+#b5:checked ~ .content .thumbnails label[for=b5],
+#b6:checked ~ .content .thumbnails label[for=b6],
+#b7:checked ~ .content .thumbnails label[for=b7],
+#b8:checked ~ .content .thumbnails label[for=b8],
+#b9:checked ~ .content .thumbnails label[for=b9],
+#b10:checked ~ .content .thumbnails label[for=b10] {
+	opacity: 1;
+	box-shadow: 0 0 0.01vmin 0.5vmin #fff;
+}
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:767px) {
+	body:after {
+		top: 2vh;
+		font-size: 20px;
+		white-space: initial;
+	}
+}
+
+@media only screen and (max-width:580px) {
+	body:after {
+		font-size: 25px;
+		white-space: pre-wrap;
+	}
+}
+.head{
+
+}
+    </style>
+</head>
+<body>
+    <script>
+      AOS.init();
+    </script>
+    <section>
+                                     <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="head">
+              <a class="logo" href="index.html"><img style="height: 20%; width: 23%; margin-left: -50px; margin-top: -5px;"
+                 src="pichass/neon-removebg-preview.png" alt="loading"></a>
+              <a class="navbar-brand fs-5 " href="index.html">Belleville Dental</a></div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+               aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item fs-5">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="book.html">Book</a>
+                  </li>
+                  <li class="nav-item fs-5">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown fs-5">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      DentaHub
+                    </a>
+                    <ul class="dropdown-menu me-auto mb-2 mb-lg-0">
+                      <li><a class="dropdown-item" href="pro education3.html">Professional Education</a></li>
+                      <li><a class="dropdown-item" href="patientedu.html">Patient Education</a></li>
+                      <li><a class="dropdown-item" href="research.html">Research</a></li>
+                      <li><a class="dropdown-item" href="product.html">Products</a></li>
+                      <li><a class="dropdown-item" href="gallery.html">Media Gallery</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div id="count">
+                <p style="color: black;">Viewed:</p>
+                                
+            <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=11869378&style=0008&nbdigits=5&type=page&initCount=0" 
+            title="Counter Widget" Alt="Visit counter For Websites"   border="1"  style="padding: 5px; color: white;
+            border-radius: 7px;"/></a>    
+            </div>      -->
+            <!-- hitwebcounter Code START -->
+
+  <img src="https://hitwebcounter.com/counter/counter.php?page=12454960&style=0008&nbdigits=5&type=ip&initCount=0" 
+  title="Counter Widget" Alt="Visit counter For Websites"   border="0" />               
+            
+          </nav>
+    </section>
+    
+    <section>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide mb-lg-0">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="pichass/h3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 style="font-weight: bolder;">I was Created to create beautiful Smiles:)</h1>
+                  <p>Proper oral hygiene is essential for maintaining a healthy mouth, as it directly 
+                    impacts our general health.</p>
+                    <center><button style="background-color: #05696b; padding: 10px;
+                      color: white; border-radius: 20px;"><a href="book.html" style="text-decoration: none;
+                       color: white;">Book Appointment</button></center></a>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="pichass/h2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 style="font-weight: bolder;">“The mouth is the gateway to the body."</h1>
+                  <p>"Blessed are those who can hold lively conversations with the helplessly mute, 
+                    for they shall be called dentists,"</p>
+                    <center><button style="background-color: #05696b; padding: 10px;
+                      color: white; border-radius: 20px;"><a href="book.html" style="text-decoration: none;
+                       color: white;">Book Appointment</button></center></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="pichass/h1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 style="font-weight: bolder;">“You Don’t Have To Brush All Your Teeth, Just The Ones You Want To Keep.” </h1>
+                  <p>"Every time you smile at someone, it is an action of love, a gift to that person, a beautiful thing."</p>
+                  <center><button style="background-color: #05696b; padding: 10px;
+                    color: white; border-radius: 20px;"><a href="book.html" style="text-decoration: none;
+                     color: white;">Book Appointment</button></center></a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    
+    <br><br><br><br><br><br>
+
+    <!-- doctors -->
+  
+      <!-- <center><h1>Meet Our Qualified Doctors</h1></center>
+	<div class="section full-height over-hide px-4 px-sm-0">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+					<div class="section mx-auto text-center slider-height-padding">
+			          	<input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+			          	<label for="slide-1"></label>
+			          	<input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+			          	<label for="slider-2"></label>
+			          	<input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+			          	<label for="slider-3"></label>
+			          	<input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+			          	<label for="slider-4"></label>
+						<ul class="slide">
+							<li>
+								<span style="color: #171a1e; font-weight: bolder; font-size: 40px;">Dr Joseph</span>
+						    </li>
+							<li>
+								<span style="color: #171a1e; font-weight: bolder; font-size: 40px;">DR. Julie</span>
+						    </li>
+							<li>
+								<span style="color: #171a1e; font-weight: bolder; font-size: 40px;">Dr. Robert</span>
+						    </li>
+							<li>
+								<span style="color: #171a1e; font-weight: bolder; font-size: 40px;">Dr. Silvea</span>
+						    </li>
+					    </ul>
+				    </div>
+			    </div>
+	      	</div>
+	    </div>
+	</div>
+</div> -->
+<center><h1 style="color: #05696b; font-weight: bolder; font-size: 60px;">Meet Our Qualified Doctors</h1></center>
+<div data-aos="fade-up">
+  
+<div class="doc">
+  <input type="radio" name="control" id="b1" checked>
+  <input type="radio" name="control" id="b2">
+  <input type="radio" name="control" id="b3">
+  <input type="radio" name="control" id="b4">
+  <input type="radio" name="control" id="b5">
+  <input type="radio" name="control" id="b6">
+  <input type="radio" name="control" id="b7">
+  <input type="radio" name="control" id="b8">
+  <input type="radio" name="control" id="b9">
+  <input type="radio" name="control" id="b10">
+  <div class="content">
+    <div class="controls">
+      <label for="b1"></label>
+      <label for="b2"></label>
+      <label for="b3"></label>
+      <label for="b4"></label>
+      <label for="b5"></label>
+      <label for="b6"></label>
+      <label for="b7"></label>
+      <label for="b8"></label>
+      <label for="b9"></label>
+      <label for="b10"></label>
+    </div>
+    <div class="thumbnails">
+      <label for="b1"></label>
+      <label for="b2"></label>
+      <label for="b3"></label>
+      <label for="b4"></label>
+      <label for="b5"></label>
+      <label for="b6"></label>
+      <label for="b7"></label>
+      <label for="b8"></label>
+      <label for="b9"></label>
+      <label for="b10"></label>
+    </div>
+  </div>
+  </div>
+</div>
+ <br><br>
+<div data-aos="fade-up">
+<center><h1 style="color: #05696b; font-weight: bolder; font-size: 60px; ;">Satisfied Patients</h1></center><br>
+<div class="patientcard">
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <center><i class="fa-solid fa-user fa-2xl"></i></center><br>
+    <p class="card-text" style="color: white;">Dr. Robert is truly exceptional! From my very first appointment, 
+      I knew I was in good hands. His expertise, compassion, and dedication to patient care are unmatched.</p>
+      <center><img src="pichass/rating.png" alt="" style="width: 50%; height: 2%; margin-top: -50px;"></center>
+  </div>
+</div>
+  <div class="card" style="width: 18rem;">
+   <div class="card-body">
+     <center><i class="fa-solid fa-user fa-2xl"></i></center><br>
+     <p class="card-text" style="color: white;"> With Dr. Silvea, I feel confident and reassured, knowing that I 
+      am in the best hands possible. Thank you, Dr. Silvea, for your unwavering commitment to excellence in patient care.</p>
+       <center><img src="pichass/rating.png" alt="" style="width: 50%; height: 2%; margin-top: -50px;"></center>
+   </div>
+ </div>
+ <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <center><i class="fa-solid fa-user fa-2xl"></i></center><br>
+    <p class="card-text" style="color: white;">A heartfelt thank you to Dr. Joseph for his exceptional
+       care and expertise. From the moment I walked into his office, I felt welcomed and valued as a patient.</p>
+      <center><img src="pichass/rating.png" alt="" style="width: 50%; height: 2%; margin-top: -50px;"></center>
+  </div>
+</div>
+</div>
+</div>
+<br><br>
+                                 <!-- offcanvas -->
+<center><button class="btn p-2" style="background-color: #05696b; color: white;" type="button" 
+  data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+  Explore More!</button></center><br>
+
+
+<div class="offcanvas offcanvas-start" style="background-color: #05696b;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title fw-bold fs-2" id="offcanvasScrollingLabel" style="color: white;">Blogs</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body";">
+    <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Click below on any of these tabs to read our recent blogs!</p>
+    <li><a href="patientedu.html" style="text-decoration: none; color: white; font-weight: bolder !important;">Patient Education</a></li>
+    <li><a href="pro education3.html" style="text-decoration: none;  color: white; font-weight: bolder !important;">Professional Education</a></li>
+    <li><a href="product.html" style="text-decoration: none;  color: white; font-weight: bolder !important;">Products</a></li>
+    <li><a href="gallery.html" style="text-decoration: none;  color: white; font-weight: bolder !important;">Media</a></li>
+    <li><a href="book.html" style="text-decoration: none;  color: white; font-weight: bolder !important;">Booking</a></li>
+  </div>
+</div><br><br><br><br>
+<!-- Meet us -->
+<div data-aos="fade-up">
+<center><h1 style="color:#05696b; font-size: 70px; font-weight: bold;">Meet Our Team Members</h1></center></div>
+<br><br><br><br>
+<div data-aos="fade-up">
+<div class="pfp">
+<div class="prof" style="background-color: #171a1e; padding: 12px;">
+  <div class="img"></div>
+  <span>Wania Baig</span>
+  <p class="info">"Wania's leadership skills have been invaluable to our team. Her ability to inspire and motivate team members,
+     coupled with his strategic vision, has kept us on track and focused on our goals."</p>
+  
+
+</div>
+<div class="prof" style="background-color: #171a1e; padding: 8px;">
+  <div class="img"></div>
+  <span>Ansharah</span>
+  <p class="info">"Ansharah's creativity and innovative thinking have brought fresh perspectives to our project. 
+    Her ability to think outside the box has led to breakthrough ideas and solutions."</p>
+ 
+
+</div>
+<div class="prof" style="background-color: #171a1e; padding: 8px;">
+  <div class="img"></div>
+  <span>Kaneez Fatima</span>
+  <p class="info">"Fatima's technical expertise has been a game-changer for our project.
+     Her deep understanding has helped us 
+     overcome challenges and achieve our objectives."</p>
+
+</div>
+ 
+</div>
+<br>
+<div class="pfp">
+<div class="prof" style="background-color: #171a1e; padding: 8px;">
+  <div class="img"></div>
+  <span>Aiman Fatima</span>
+  <p class="info">"Aiman's dedication to the project is truly commendable. His 
+    tireless work ethic and attention to detail have been instrumental in driving our team's success."</p>
+  
+</div>
+<div class="prof" style="background-color: #171a1e; padding: 8px;">
+  <div class="img"></div>
+  <span>Hira Ali</span>
+  <p class="info">"Hira's attention to detail and commitment to excellence have played a significant 
+    role in ensuring the high quality of our project deliverables."</p>
+  
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<br><br><br>
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" >
+<!-- Section: Social media -->
+<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
+  <!-- Left -->
+  <div class="me-5 d-none d-lg-block">
+    <span style="color:#171a1e; " > Get connected with us on social networks:</span>
+  </div>
+</section>
+
+<!-- Section: Links  -->
+<section class="footer" style="background-color:#171a1e ;">
+  <div class="container text-center text-md-start mt-5" >
+    <!-- Grid row -->
+    <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <!-- Content -->
+        <h6 class="text-uppercase fw-bold mb-4" style="color: #05696b; margin-top: 20px;">
+        Belleville Dental
+        </h6>
+        <p style="color:white;" >
+          Welcome to our website, where every click brings you closer to a brighter, healthier
+           smile. At Belleville Dental, we're dedicated to providing comprehensive dental care with a personal touch.
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold mb-4" style="color:#05696b !important;  margin-top: 20px;">
+          Quick Links
+        </h6>
+        <p>
+          <a href="index.html" class="text-reset" style="color:#05696b !important;">Home</a>
+        </p>
+        <p>
+          <a href="aboutus.html" class="text-reset" style="color:#05696b !important; ">About</a>
+        </p>
+        <p>
+          <a href="book.html" class="text-reset" style="color:#05696b !important;">Book</a>
+        </p>
+        <p>
+          <a href="contact.html" class="text-reset" style="color: #05696b !important;">Contact Us</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold mb-4" style="color:#05696b !important;  margin-top: 20px;">Contact</h6>
+        <p style="color:#05696b !important"><i class="fas fa-home me-3 " ></i> New York, NY 10012, US</p>
+        <p style="color:#05696b !important">
+          <i class="fas fa-envelope me-3"></i>
+          bellevilledental.com
+        </p>
+        <p style="color:#05696b !important"><i class="fas fa-phone me-3"></i> +92 3188722733</p>
+        <!-- Section: Social media -->
+        <div>
+          <a href="https://www.facebook.com/profile.php?id=61557518252499&mibextid=LQQJ4d" target="_blank" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/belleville_dental_?igsh=bGdpbmMyMjNieGl2" target="_blank" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  © 2021 Copyright:
+</div>
+<!-- Copyright -->
+</footer>
+
+</body>
+</html>
